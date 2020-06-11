@@ -11,7 +11,7 @@ server.use(express.urlencoded({ extended: true }))
 
 // Utilizando template engine
 const nunjucks = require("nunjucks")
-nunjucks.configure("src/views", {
+nunjucks.configure("src/view", {
     express: server,
     noCache: true
 })
@@ -21,7 +21,7 @@ nunjucks.configure("src/views", {
 // res: resposta
 
 server.get("/", (req, res) => {
-    return res.render("index.html", { title: "Um título"})
+    return res.render("index.html", { title: "Um título" })
 })
 
 server.get("/create-point", (req, res) => {
@@ -68,7 +68,7 @@ server.post("/savepoint", (req, res) => {
        console.log("Cadastrado com sucesso")
        console.log(this)
 
-       return res.render("create-point.html", {saved: true})
+       return res.render("create-point.html", { saved: true })
     } 
 
     db.run(query, values, afterInsertData)    
@@ -94,5 +94,4 @@ server.get("/search", (req, res) => {
     })
 })
 
-// Ligar o servidor na porta localhost:3000
-server.listen(3000)
+server.listen(3000) // Liga o servidor na porta localhost:3000
