@@ -1,5 +1,5 @@
 {
-  "name": "NLW-1.0-starter-ecoleta",
+  "name": "nlw-1.0-starter-ecoleta",
   "dependencies": {
     "express": "^4.17.1",
     "nunjucks": "^3.2.1",
@@ -9,7 +9,8 @@
     "nodemon": "^2.0.4"
   },
   "scripts": {
-    "start": "nodemon src/server.js"
+    "start": "nodemon src/server.js",
+    "db": "nodemon src/database/db.js"
   },
   "repository": {
     "type": "git",
